@@ -1,0 +1,199 @@
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+body {
+  font-family: 'Hanna', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-header {
+  padding: 30px;
+  border-bottom: solid 1px #ccc;
+}
+
+.header-inner {
+  /* we use flexbox to align the header content automatically
+  and justify the spaces between the elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+.logo,
+.language-select {
+  display: block;
+  width: 80px;
+}
+
+.language-select {
+  text-align: right;
+  font-size: 12px;
+}
+
+.menu {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  margin-left: 15px;
+  margin-right: 15px;
+  text-transform: lowercase;
+}
+
+.hero {
+  padding-top: 160px;
+  padding-bottom: 220px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* here we have a reusable class for our inner container */
+.container {
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  background-image: url('../assets/intro-bg.svg');
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+} 
+
+.hero-text {
+  font-size: 180px;
+  line-height: 1;
+  color: #FF0066;
+  text-align: center;
+}
+
+.hero-sitename {
+  color: #000;
+}
+
+.hero-description {
+  margin: 0;
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+
+.magenta {
+  color: #FF0066
+}
+
+.intro {
+  background-image: url('../assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 310px;
+  padding-bottom: 250px;
+}
+
+.intro-inner {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #fff;
+  /* 20% black text shadow */
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.20);
+}
+
+.intro-title {
+  font-size: 20px;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 1px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  display: inline-block;
+}
+
+.intro-description {
+  font-size: 50px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.yellow {
+  color: #F8E71C
+}
+
+.entry-header {
+  padding: 10px 20px;
+  background-color: #FF0066;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry-title,
+.entry-price {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+}
+
+.entry-title {
+  text-transform: lowercase
+}
+
+/* by default wordpress sets width and height on our images,
+so we need to override this using some important! css rules */
+.wp-post-image {
+  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+}
+
+.post-thumbnail {
+  display: block;
+  /* disable the link from being clicked */
+  pointer-events: none;
+}
+
+.food-title {
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: solid 1px #ccc;
+  text-align: center;
+  text-transform: lowercase;
+  margin-bottom: 50px;
+}
+
+/* 
+1220px wide grid
+2 x 3 grid
+20px space horizontally
+50px space vertically
+*/
+
+.food-grid {
+  display: grid;
+  /* this tells us we want to have 2 columns */
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 20px;
+
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
