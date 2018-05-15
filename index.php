@@ -18,12 +18,8 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<!-- our hero element… todo: make it dynamic (we’ll hard code it to begin with) -->
-
-
 		<!-- here we write a query to grab ourselves one post from the menu
 		category, and make it a random one each time -->
-
 		<?php query_posts('posts_per_page=1&category_name=menu&orderby=rand'); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

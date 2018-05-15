@@ -50,7 +50,6 @@
 				?>
 			</nav><!-- #site-navigation -->
 
-			<!-- todo: make this actually work -->
 			<div class="language-select">
 				<a lang="ko-KR" hreflang="ko-KR" href="<?php echo site_url('/kr'); ?>">KR</a> | 
 				<a lang="en-US" hreflang="en-US" href="<?php echo site_url(); ?>">EN</a>
